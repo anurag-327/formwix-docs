@@ -1,6 +1,6 @@
 "use client";
-import { Formwiz, TypeFieldConfig, TypeFormData } from "formwiz";
-import "formwiz/dist/formwiz.css";
+import { Formwix, TypeFieldConfig, TypeFormData } from "formwix";
+import "formwix/dist/formwix.css";
 export default function SurveyForm() {
   const fields: TypeFieldConfig[] = [
     {
@@ -109,7 +109,7 @@ export default function SurveyForm() {
   };
 
   return (
-    <div className="max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-md">
+    <div className="max-w-3xl mx-auto p-6 bg-white rounded-lg shadow-md">
       <h2 className="text-2xl font-bold mb-6 text-center">
         Customer Satisfaction Survey
       </h2>
@@ -117,7 +117,7 @@ export default function SurveyForm() {
         Please help us improve our products and services by providing your
         feedback.
       </p>
-      <Formwiz config={formConfig} />
+      <Formwix config={formConfig} />
     </div>
   );
 }

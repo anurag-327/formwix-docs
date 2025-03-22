@@ -1,6 +1,6 @@
 "use client";
-import { Formwiz, TypeFieldConfig, TypeFormData } from "formwiz";
-import "formwiz/dist/formwiz.css";
+import { Formwix, TypeFieldConfig, TypeFormData } from "formwix";
+import "formwix/dist/formwix.css";
 export default function JobApplicationForm() {
   const fields: TypeFieldConfig[] = [
     {
@@ -186,7 +186,7 @@ export default function JobApplicationForm() {
       <p className="mb-6 text-center text-gray-600">
         Please fill out all required fields to apply for this position.
       </p>
-      <Formwiz config={formConfig} />
+      <Formwix config={formConfig} />
     </div>
   );
 }

@@ -1,5 +1,5 @@
 "use client";
-import FormWizBadge from "@/components/shared/FormwizBadge";
+import FormWizBadge from "@/components/shared/FormwixBadge";
 import {
   Card,
   CardContent,
@@ -9,13 +9,13 @@ import {
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import {
-  Formwiz,
+  Formwix,
   TypeFieldConfig,
   TypeFormConfig,
   TypeFormData,
-} from "formwiz";
+} from "formwix";
 import { toast } from "sonner";
-import "formwiz/dist/formwiz.css";
+import "formwix/dist/formwix.css";
 export default function DemoContactForm() {
   const fields: TypeFieldConfig[] = [
     {
@@ -109,7 +109,7 @@ export default function DemoContactForm() {
       </CardHeader>
       <Separator />
       <CardContent className="py-6 flex flex-col gap-6">
-        <Formwiz
+        <Formwix
           config={config}
           theme={{
             submitButton: "bg-black text-white w-full py-2 rounded-lg",

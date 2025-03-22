@@ -1,5 +1,5 @@
 "use client";
-import FormWizBadge from "@/components/shared/FormwizBadge";
+import FormWizBadge from "@/components/shared/FormwixBadge";
 import {
   Card,
   CardContent,
@@ -9,12 +9,12 @@ import {
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import {
-  Formwiz,
+  Formwix,
   TypeFieldConfig,
   TypeFormConfig,
   TypeFormData,
-} from "formwiz";
-import "formwiz/dist/formwiz.css";
+} from "formwix";
+import "formwix/dist/formwix.css";
 import { toast } from "sonner";
 export default function DemoFrom({ fields }: { fields: TypeFieldConfig[] }) {
   const config: TypeFormConfig = {
@@ -54,7 +54,7 @@ export default function DemoFrom({ fields }: { fields: TypeFieldConfig[] }) {
       </CardHeader>
       <Separator />
       <CardContent className="py-6">
-        <Formwiz
+        <Formwix
           config={config}
           theme={{
             email:

@@ -1,11 +1,11 @@
 "use client";
 import {
-  Formwiz,
+  Formwix,
   TypeFieldConfig,
   TypeFormConfig,
   TypeFormData,
-} from "formwiz";
-import "formwiz/dist/formwiz.css";
+} from "formwix";
+import "formwix/dist/formwix.css";
 import {
   Card,
   CardContent,
@@ -14,7 +14,7 @@ import {
   CardTitle,
 } from "../ui/card";
 import { useSearchParams } from "next/navigation";
-import FormWizBadge from "../shared/FormwizBadge";
+import FormWizBadge from "../shared/FormwixBadge";
 import { Separator } from "../ui/separator";
 
 export default function Signup() {
@@ -109,7 +109,7 @@ export default function Signup() {
       </CardHeader>
       <Separator />
       <CardContent className="py-6">
-        <Formwiz
+        <Formwix
           config={config}
           theme={{
             label: "text-gray-800 font-[500]",

@@ -15,7 +15,7 @@ import {
   TypeURLFieldConfig,
   TypeTelFieldConfig,
   TypeDateTimeLocalFieldConfig,
-} from "formwiz"; // Import types from your types file
+} from "formwix"; // Import types from your types file
 
 export interface FieldDocConfig {
   type: string;
@@ -68,7 +68,7 @@ export interface TypeTextFieldConfig extends TypeBaseFieldConfig {
     type: "text";
   }`,
     componentOutline: `
-  <FormwizTextField
+  <FormwixTextField
     label="Text Field"
     placeholder="Enter text"
     validation={{
@@ -77,9 +77,9 @@ export interface TypeTextFieldConfig extends TypeBaseFieldConfig {
       maxLength: { value: 50, message: "Maximum 50 characters allowed" }
     }}
   />`,
-    generatedCode: `import { Formwiz, TypeFormData, TypeFieldConfig, TypeFormConfig } from "formwiz";
+    generatedCode: `import { Formwix, TypeFormData, TypeFieldConfig, TypeFormConfig } from "formwix";
   
-  export default function FormwizDemo() {
+  export default function FormwixDemo() {
     // Define form fields configuration
     const formFields: TypeFieldConfig[] = [
       {
@@ -115,14 +115,14 @@ export interface TypeTextFieldConfig extends TypeBaseFieldConfig {
   
     return (
       <div>
-        <Formwiz config={config} />
+        <Formwix config={config} />
       </div>
     );
   }`,
     customCodeUsage: `import { useForm } from "react-hook-form";
-import { FormwizTextField } from "formwiz";
+import { FormwixTextField } from "formwix";
   
-export default function FormwizTextFieldDemo() {
+export default function FormwixTextFieldDemo() {
     const theme = {
       text: "border border-gray-300 rounded-md p-2",
     };
@@ -140,7 +140,7 @@ export default function FormwizTextFieldDemo() {
     return (
       <form onSubmit={handleSubmit(onSubmit)}>
 
-      {/* The FormwizTextField component only renders the input field.
+      {/* The FormwixTextField component only renders the input field.
           It does not include a label or error message by default.
           You need to manually add them for better accessibility and user feedback. 
     */}
@@ -148,7 +148,7 @@ export default function FormwizTextFieldDemo() {
         <label htmlFor="textField">Text Field</label>
         {errors.textField && <span className="text-red-500">{errors.textField.message}</span>}
   
-        <FormwizTextField
+        <FormwixTextField
           field={{
             type: "text",
             name: "textField",
@@ -204,7 +204,7 @@ export default function FormwizTextFieldDemo() {
     type: "email";
   }`,
     componentOutline: `
-  <FormwizEmailField
+  <FormwixEmailField
     label="Email"
     placeholder="Enter your email"
     validation={{
@@ -215,9 +215,9 @@ export default function FormwizTextFieldDemo() {
       }
     }}
   />`,
-    generatedCode: `import { Formwiz, TypeFormData, TypeFieldConfig, TypeFormConfig } from "formwiz";
+    generatedCode: `import { Formwix, TypeFormData, TypeFieldConfig, TypeFormConfig } from "formwix";
   
-  export default function FormwizDemo() {
+  export default function FormwixDemo() {
     // Define form fields configuration
     const formFields: TypeFieldConfig[] = [
       {
@@ -249,19 +249,19 @@ export default function FormwizTextFieldDemo() {
   
     return (
       <div>
-        <Formwiz config={config} />
+        <Formwix config={config} />
       </div>
     );
   }`,
     customCodeUsage: `import { useForm } from "react-hook-form";
-  import { FormwizEmailField } from "formwiz";
+  import { FormwixEmailField } from "formwix";
   
-  export default function FormwizEmailFieldDemo() {
+  export default function FormwixEmailFieldDemo() {
     const theme = {
       email: "border border-gray-300 rounded-md p-2",
     };
   
-     {/* The FormwizEmailField component only renders the input field.
+     {/* The FormwixEmailField component only renders the input field.
           It does not include a label or error message by default.
           You need to manually add them for better accessibility and user feedback. 
     */}
@@ -281,7 +281,7 @@ export default function FormwizTextFieldDemo() {
         <label htmlFor="email">Email</label>
         {errors.email && <span className="text-red-500">{errors.email.message}</span>}
   
-        <FormwizEmailField
+        <FormwixEmailField
           field={{
             type: "email",
             name: "email",
@@ -357,7 +357,7 @@ export default function FormwizTextFieldDemo() {
     };
   }`,
     componentOutline: `
-  <FormwizPasswordField
+  <FormwixPasswordField
     label="Password"
     placeholder="Enter your password"
     validation={{
@@ -369,9 +369,9 @@ export default function FormwizTextFieldDemo() {
       containSpecialChar: { value: true, message: "Must contain special character" }
     }}
   />`,
-    generatedCode: `import { Formwiz, TypeFormData, TypeFieldConfig, TypeFormConfig } from "formwiz";
+    generatedCode: `import { Formwix, TypeFormData, TypeFieldConfig, TypeFormConfig } from "formwix";
   
-  export default function FormwizDemo() {
+  export default function FormwixDemo() {
     // Define form fields configuration
     const formFields: TypeFieldConfig[] = [
       {
@@ -419,15 +419,15 @@ export default function FormwizTextFieldDemo() {
   
     return (
       <div>
-        <Formwiz config={config} />
+        <Formwix config={config} />
       </div>
     );
   }`,
     customCodeUsage: `import { useForm } from "react-hook-form";
-    import { FormwizPasswordField, TypeFormData } from "formwiz";
+    import { FormwixPasswordField, TypeFormData } from "formwix";
     
     
-    export default function FormwizPasswordFieldDemo() {
+    export default function FormwixPasswordFieldDemo() {
       const theme = {
         // define theme for the field
         // refer to themes section for more details
@@ -444,7 +444,7 @@ export default function FormwizTextFieldDemo() {
     
       return (
         <form onSubmit={handleSubmit(onSubmit)}>
-          {/* The FormwizEmailField component only renders the input field.
+          {/* The FormwixEmailField component only renders the input field.
               It does not include a label or error message by default.
               You need to manually add them for better accessibility and user feedback. 
         */}
@@ -455,7 +455,7 @@ export default function FormwizTextFieldDemo() {
             </span>
           )}
     
-          <FormwizPasswordField
+          <FormwixPasswordField
             field={{
               type: "password",
               name: "password",
@@ -503,7 +503,7 @@ export default function FormwizTextFieldDemo() {
     type: "number";
   }`,
     componentOutline: `
-  <FormwizNumberField
+  <FormwixNumberField
     label="Quantity"
     placeholder="Enter quantity"
     validation={{
@@ -512,9 +512,9 @@ export default function FormwizTextFieldDemo() {
       max: { value: 100, message: "Maximum quantity is 100" }
     }}
   />`,
-    generatedCode: `import { Formwiz, TypeFormData, TypeFieldConfig, TypeFormConfig } from "formwiz";
+    generatedCode: `import { Formwix, TypeFormData, TypeFieldConfig, TypeFormConfig } from "formwix";
   
-  export default function FormwizDemo() {
+  export default function FormwixDemo() {
     // Define form fields configuration
     const formFields: TypeFieldConfig[] = [
       {
@@ -550,14 +550,14 @@ export default function FormwizTextFieldDemo() {
   
     return (
       <div>
-        <Formwiz config={config} />
+        <Formwix config={config} />
       </div>
     );
   }`,
     customCodeUsage: `import { useForm } from "react-hook-form";
-import { FormwizNumberField } from "formwiz";
+import { FormwixNumberField } from "formwix";
   
-export default function FormwizNumberFieldDemo() {
+export default function FormwixNumberFieldDemo() {
     const theme = {
       number: "border border-gray-300 rounded-md p-2",
     };
@@ -575,7 +575,7 @@ export default function FormwizNumberFieldDemo() {
     return (
       <form onSubmit={handleSubmit(onSubmit)}>
 
-       {/* The FormwizNumberField component only renders the input field.
+       {/* The FormwixNumberField component only renders the input field.
           It does not include a label or error message by default.
           You need to manually add them for better accessibility and user feedback. 
     */}
@@ -583,7 +583,7 @@ export default function FormwizNumberFieldDemo() {
         <label htmlFor="quantity">Quantity</label>
         {errors.quantity && <span className="text-red-500">{errors.quantity.message}</span>}
   
-        <FormwizNumberField
+        <FormwixNumberField
           field={{
             type: "number",
             name: "quantity",
@@ -648,7 +648,7 @@ export interface TypeSelectFieldConfig extends TypeBaseFieldConfig {
 }
 `,
     componentOutline: `
-  <FormwizSelectField
+  <FormwixSelectField
     label="Country"
     placeholder="Select your country"
     options={[
@@ -660,9 +660,9 @@ export interface TypeSelectFieldConfig extends TypeBaseFieldConfig {
       required: { value: true, message: "Please select a country" }
     }}
   />`,
-    generatedCode: `import { Formwiz, TypeFormData, TypeFieldConfig, TypeFormConfig } from "formwiz";
+    generatedCode: `import { Formwix, TypeFormData, TypeFieldConfig, TypeFormConfig } from "formwix";
   
-  export default function FormwizDemo() {
+  export default function FormwixDemo() {
     // Define form fields configuration
     const formFields: TypeFieldConfig[] = [
       {
@@ -695,14 +695,14 @@ export interface TypeSelectFieldConfig extends TypeBaseFieldConfig {
   
     return (
       <div>
-        <Formwiz config={config} />
+        <Formwix config={config} />
       </div>
     );
   }`,
     customCodeUsage: `import { useForm } from "react-hook-form";
-import { FormwizSelectField } from "formwiz";
+import { FormwixSelectField } from "formwix";
   
-export default function FormwizSelectFieldDemo() {
+export default function FormwixSelectFieldDemo() {
     const theme = {
       select: "border border-gray-300 rounded-md p-2",
     };
@@ -720,7 +720,7 @@ export default function FormwizSelectFieldDemo() {
     return (
       <form onSubmit={handleSubmit(onSubmit)}>
 
-       {/* The FormwizSelectField component only renders the input field.
+       {/* The FormwixSelectField component only renders the input field.
           It does not include a label or error message by default.
           You need to manually add them for better accessibility and user feedback. 
     */}
@@ -728,7 +728,7 @@ export default function FormwizSelectFieldDemo() {
         <label htmlFor="country">Country</label>
         {errors.country && <span className="text-red-500">{errors.country.message}</span>}
   
-        <FormwizSelectField
+        <FormwixSelectField
           field={{
             type: "select",
             name: "country",
@@ -785,7 +785,7 @@ export default function FormwizSelectFieldDemo() {
     rows?: number;
   }`,
     componentOutline: `
-  <FormwizTextAreaField
+  <FormwixTextAreaField
     label="Description"
     placeholder="Enter description"
     rows={4}
@@ -794,9 +794,9 @@ export default function FormwizSelectFieldDemo() {
       maxLength: { value: 500, message: "Maximum 500 characters allowed" }
     }}
   />`,
-    generatedCode: `import { Formwiz, TypeFormData, TypeFieldConfig, TypeFormConfig } from "formwiz";
+    generatedCode: `import { Formwix, TypeFormData, TypeFieldConfig, TypeFormConfig } from "formwix";
   
-  export default function FormwizDemo() {
+  export default function FormwixDemo() {
     // Define form fields configuration
     const formFields: TypeFieldConfig[] = [
       {
@@ -829,14 +829,14 @@ export default function FormwizSelectFieldDemo() {
   
     return (
       <div>
-        <Formwiz config={config} />
+        <Formwix config={config} />
       </div>
     );
   }`,
     customCodeUsage: `import { useForm } from "react-hook-form";
-import { FormwizTextAreaField } from "formwiz";
+import { FormwixTextAreaField } from "formwix";
   
-export default function FormwizTextAreaFieldDemo() {
+export default function FormwixTextAreaFieldDemo() {
     const theme = {
       textarea: "border border-gray-300 rounded-md p-2",
     };
@@ -854,7 +854,7 @@ export default function FormwizTextAreaFieldDemo() {
     return (
       <form onSubmit={handleSubmit(onSubmit)}>
 
-       {/* The FormwizTextAreaField component only renders the input field.
+       {/* The FormwixTextAreaField component only renders the input field.
           It does not include a label or error message by default.
           You need to manually add them for better accessibility and user feedback. 
     */}
@@ -862,7 +862,7 @@ export default function FormwizTextAreaFieldDemo() {
         <label htmlFor="description">Description</label>
         {errors.description && <span className="text-red-500">{errors.description.message}</span>}
   
-        <FormwizTextAreaField
+        <FormwixTextAreaField
           field={{
             type: "textarea",
             name: "description",
@@ -910,15 +910,15 @@ export default function FormwizTextAreaFieldDemo() {
     label: string;
   }`,
     componentOutline: `
-  <FormwizCheckboxField
+  <FormwixCheckboxField
     label="I agree to the terms and conditions"
     validation={{
       required: { value: true, message: "You must agree to the terms" }
     }}
   />`,
-    generatedCode: `import { Formwiz, TypeFormData, TypeFieldConfig, TypeFormConfig } from "formwiz";
+    generatedCode: `import { Formwix, TypeFormData, TypeFieldConfig, TypeFormConfig } from "formwix";
   
-  export default function FormwizDemo() {
+  export default function FormwixDemo() {
     // Define form fields configuration
     const formFields: TypeFieldConfig[] = [
       {
@@ -945,14 +945,14 @@ export default function FormwizTextAreaFieldDemo() {
   
     return (
       <div>
-        <Formwiz config={config} />
+        <Formwix config={config} />
       </div>
     );
   }`,
     customCodeUsage: `import { useForm } from "react-hook-form";
-  import { FormwizCheckboxField } from "formwiz";
+  import { FormwixCheckboxField } from "formwix";
   
-  export default function FormwizCheckboxFieldDemo() {
+  export default function FormwixCheckboxFieldDemo() {
     const theme = {
       checkbox: "h-4 w-4 rounded border-gray-300 text-blue-600",
     };
@@ -975,7 +975,7 @@ export default function FormwizTextAreaFieldDemo() {
       <form onSubmit={handleSubmit(onSubmit)}>
         {errors.terms && <span className="text-red-500">{errors.terms.message}</span>}
   
-        <FormwizCheckboxField
+        <FormwixCheckboxField
           field={{
             type: "checkbox",
             name: "terms",
@@ -1024,7 +1024,7 @@ export default function FormwizTextAreaFieldDemo() {
     value: string | number;
   }`,
     componentOutline: `
-  <FormwizRadioField
+  <FormwixRadioField
     label="Gender"
     options={[
       { label: "Male", value: "male" },
@@ -1035,9 +1035,9 @@ export default function FormwizTextAreaFieldDemo() {
       required: { value: true, message: "Please select a gender" }
     }}
   />`,
-    generatedCode: `import { Formwiz, TypeFormData, TypeFieldConfig, TypeFormConfig } from "formwiz";
+    generatedCode: `import { Formwix, TypeFormData, TypeFieldConfig, TypeFormConfig } from "formwix";
   
-  export default function FormwizDemo() {
+  export default function FormwixDemo() {
     // Define form fields configuration
     const formFields: TypeFieldConfig[] = [
       {
@@ -1069,14 +1069,14 @@ export default function FormwizTextAreaFieldDemo() {
   
     return (
       <div>
-        <Formwiz config={config} />
+        <Formwix config={config} />
       </div>
     );
   }`,
     customCodeUsage: `import { useForm } from "react-hook-form";
-  import { FormwizRadioField } from "formwiz";
+  import { FormwixRadioField } from "formwix";
   
-  export default function FormwizRadioFieldDemo() {
+  export default function FormwixRadioFieldDemo() {
     const theme = {
       radio: "h-4 w-4 border-gray-300 text-blue-600",
     };
@@ -1096,7 +1096,7 @@ export default function FormwizTextAreaFieldDemo() {
         <legend>Gender</legend>
         {errors.gender && <span className="text-red-500">{errors.gender.message}</span>}
   
-        <FormwizRadioField
+        <FormwixRadioField
           field={{
             type: "radio",
             name: "gender",
@@ -1163,7 +1163,7 @@ export interface TypeTextFieldConfig extends TypeBaseFieldConfig {
     type: "text";
   }`,
     componentOutline: `
-  <FormwizTextField
+  <FormwixTextField
     label="Text Field"
     placeholder="Enter text"
     validation={{
@@ -1172,9 +1172,9 @@ export interface TypeTextFieldConfig extends TypeBaseFieldConfig {
       maxLength: { value: 50, message: "Maximum 50 characters allowed" }
     }}
   />`,
-    generatedCode: `import { Formwiz, TypeFormData, TypeFieldConfig, TypeFormConfig } from "formwiz";
+    generatedCode: `import { Formwix, TypeFormData, TypeFieldConfig, TypeFormConfig } from "formwix";
   
-  export default function FormwizDemo() {
+  export default function FormwixDemo() {
     // Define form fields configuration
     const formFields: TypeFieldConfig[] = [
       {
@@ -1210,14 +1210,14 @@ export interface TypeTextFieldConfig extends TypeBaseFieldConfig {
   
     return (
       <div>
-        <Formwiz config={config} />
+        <Formwix config={config} />
       </div>
     );
   }`,
     customCodeUsage: `import { useForm } from "react-hook-form";
-  import { FormwizTextField } from "formwiz";
+  import { FormwixTextField } from "formwix";
   
-  export default function FormwizTextFieldDemo() {
+  export default function FormwixTextFieldDemo() {
     const theme = {
       text: "border border-gray-300 rounded-md p-2",
     };
@@ -1237,7 +1237,7 @@ export interface TypeTextFieldConfig extends TypeBaseFieldConfig {
         <label htmlFor="textField">Text Field</label>
         {errors.textField && <span className="text-red-500">{errors.textField.message}</span>}
   
-        <FormwizTextField
+        <FormwixTextField
           field={{
             type: "text",
             name: "textField",

@@ -1,5 +1,5 @@
 "use client";
-import FormWizBadge from "@/components/shared/FormwizBadge";
+import FormWizBadge from "@/components/shared/FormwixBadge";
 import {
   Card,
   CardContent,
@@ -9,13 +9,13 @@ import {
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import {
-  Formwiz,
+  Formwix,
   TypeFieldConfig,
   TypeFormConfig,
   TypeFormData,
-} from "formwiz";
+} from "formwix";
 import { toast } from "sonner";
-import "formwiz/dist/formwiz.css";
+import "formwix/dist/formwix.css";
 export default function DemoLogin() {
   const fields: TypeFieldConfig[] = [
     {
@@ -23,6 +23,10 @@ export default function DemoLogin() {
       label: "Email",
       name: "email",
       placeholder: "Enter your email",
+      theme: {
+        email:
+          "border border-gray-300 w-full py-2 px-2 rounded-lg outline-none",
+      },
       validation: {
         required: { value: true, message: "Email is required" },
       },
@@ -32,7 +36,12 @@ export default function DemoLogin() {
       label: "Password",
       name: "password",
       placeholder: "Enter your password",
-
+      theme: {
+        passwordWrapper:
+          "border flex justify-end items-center relative border-gray-300 w-full py-2 px-2 rounded-lg",
+        passwordEyeButton: "text-gray-300",
+        passwordEyeCloseButton: "text-gray-600",
+      },
       validation: {
         required: { value: true, message: "Password is required" },
         minLength: {
@@ -85,7 +94,7 @@ export default function DemoLogin() {
   };
 
   return (
-    <Card className="w-[95%] h-fit sm:w-[420px] relative">
+    <Card className=" h-fit sm:w-[420px] relative">
       <FormWizBadge />
       <CardHeader>
         <CardTitle className="text-2xl font-bold text-start">
@@ -100,15 +109,9 @@ export default function DemoLogin() {
       </CardHeader>
       <Separator />
       <CardContent className="py-6 flex flex-col gap-6">
-        <Formwiz
+        <Formwix
           config={config}
           theme={{
-            email:
-              "border border-gray-300 w-full py-2 px-2 rounded-lg outline-none",
-            passwordWrapper:
-              "border flex justify-end items-center relative border-gray-300 w-full py-2 px-2 rounded-lg",
-            passwordEyeButton: "text-gray-300",
-            passwordEyeCloseButton: "text-gray-600",
             submitButton: "bg-black text-white w-full py-2 rounded-lg",
           }}
         />

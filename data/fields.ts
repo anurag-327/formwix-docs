@@ -1,4 +1,3 @@
-// fieldConfigs.ts
 import {
   TypeFieldConfig,
   TypeTextFieldConfig,
@@ -15,19 +14,17 @@ import {
   TypeURLFieldConfig,
   TypeTelFieldConfig,
   TypeDateTimeLocalFieldConfig,
-} from "formwiz"; // Import types from your types file
+} from "formwix";
 
 export interface FieldDocConfig {
   type: string;
   name: string;
   description: string;
   config: TypeFieldConfig;
-  customCodeUsage: string;
   fieldTypeDefinition: string;
   validationRules?: string;
 }
 
-// Array of all supported field configurations
 export const formFields: FieldDocConfig[] = [
   {
     type: "text",
@@ -67,63 +64,6 @@ export const formFields: FieldDocConfig[] = [
   export interface TypeTextFieldConfig extends TypeBaseFieldConfig {
       type: "text";
     }`,
-    customCodeUsage: `import { useForm } from "react-hook-form";
-  import { FormwizTextField } from "formwiz";
-    
-  export default function FormwizTextFieldDemo() {
-      const theme = {
-        text: "border border-gray-300 rounded-md p-2",
-      };
-    
-      const {
-        control,
-        formState: { errors },
-        handleSubmit,
-      } = useForm();
-    
-      function onSubmit(data) {
-        console.log(data);
-      }
-    
-      return (
-        <form onSubmit={handleSubmit(onSubmit)}>
-  
-        {/* The FormwizTextField component only renders the input field.
-            It does not include a label or error message by default.
-            You need to manually add them for better accessibility and user feedback. 
-      */}
-  
-          <label htmlFor="textField">Text Field</label>
-          {errors.textField && <span className="text-red-500">{errors.textField.message}</span>}
-    
-          <FormwizTextField
-            field={{
-              type: "text",
-              name: "textField",
-              label: "Text Field",
-              placeholder: "Enter text",
-              validation: {
-                required: {
-                  value: true,
-                  message: "Required"
-                },
-                minLength: {
-                  value: 3,
-                  message: "Minimum 3 characters required"
-                },
-                maxLength: {
-                  value: 50,
-                  message: "Maximum 50 characters allowed"
-                }
-              },
-            }}
-            control={control}
-            errors={errors}
-            theme={theme}
-          />
-        </form>
-      );
-    }`,
   },
   {
     type: "email",
@@ -147,58 +87,6 @@ export const formFields: FieldDocConfig[] = [
         }`,
     fieldTypeDefinition: `export interface TypeEmailFieldConfig extends TypeBaseFieldConfig {
       type: "email";
-    }`,
-    customCodeUsage: `import { useForm } from "react-hook-form";
-    import { FormwizEmailField } from "formwiz";
-    
-    export default function FormwizEmailFieldDemo() {
-      const theme = {
-        email: "border border-gray-300 rounded-md p-2",
-      };
-    
-       {/* The FormwizEmailField component only renders the input field.
-            It does not include a label or error message by default.
-            You need to manually add them for better accessibility and user feedback. 
-      */}
-  
-      const {
-        control,
-        formState: { errors },
-        handleSubmit,
-      } = useForm();
-    
-      function onSubmit(data) {
-        console.log(data);
-      }
-    
-      return (
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <label htmlFor="email">Email</label>
-          {errors.email && <span className="text-red-500">{errors.email.message}</span>}
-    
-          <FormwizEmailField
-            field={{
-              type: "email",
-              name: "email",
-              label: "Email",
-              placeholder: "Enter your email",
-              validation: {
-                required: {
-                  value: true,
-                  message: "Email is required"
-                },
-                pattern: {
-                  value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,}$/i,
-                  message: "Invalid email address"
-                }
-              },
-            }}
-            control={control}
-            errors={errors}
-            theme={theme}
-          />
-        </form>
-      );
     }`,
   },
   {
@@ -253,52 +141,6 @@ export const formFields: FieldDocConfig[] = [
         matchField?: TypeMatchFieldValidationRule;
       };
     }`,
-    customCodeUsage: `import { useForm } from "react-hook-form";
-      import { FormwizPasswordField, TypeFormData } from "formwiz";
-      
-      
-      export default function FormwizPasswordFieldDemo() {
-        const theme = {
-          // define theme for the field
-          // refer to themes section for more details
-        };
-        const {
-          control,
-          formState: { errors },
-          handleSubmit,
-        } = useForm();
-      
-        function onSubmit(data: TypeFormData) {
-          console.log(data);
-        }
-      
-        return (
-          <form onSubmit={handleSubmit(onSubmit)}>
-            {/* The FormwizEmailField component only renders the input field.
-                It does not include a label or error message by default.
-                You need to manually add them for better accessibility and user feedback. 
-          */}
-            <label htmlFor="password">Password</label>
-            {errors.password && (
-              <span className="text-red-500">
-                {(errors.password.message as string) ?? "Required"}
-              </span>
-            )}
-      
-            <FormwizPasswordField
-              field={{
-                type: "password",
-                name: "password",
-                label: "Password",
-                placeholder: "Enter your password",
-                control={control}
-                errors={errors}
-                theme={theme}
-            />
-          </form>
-        );
-      }
-      `,
   },
   {
     type: "number",
@@ -333,63 +175,6 @@ export const formFields: FieldDocConfig[] = [
         }`,
     fieldTypeDefinition: `export interface TypeNumberFieldConfig extends TypeBaseFieldConfig {
       type: "number";
-    }`,
-    customCodeUsage: `import { useForm } from "react-hook-form";
-  import { FormwizNumberField } from "formwiz";
-    
-  export default function FormwizNumberFieldDemo() {
-      const theme = {
-        number: "border border-gray-300 rounded-md p-2",
-      };
-    
-      const {
-        control,
-        formState: { errors },
-        handleSubmit,
-      } = useForm();
-    
-      function onSubmit(data) {
-        console.log(data);
-      }
-    
-      return (
-        <form onSubmit={handleSubmit(onSubmit)}>
-  
-         {/* The FormwizNumberField component only renders the input field.
-            It does not include a label or error message by default.
-            You need to manually add them for better accessibility and user feedback. 
-      */}
-  
-          <label htmlFor="quantity">Quantity</label>
-          {errors.quantity && <span className="text-red-500">{errors.quantity.message}</span>}
-    
-          <FormwizNumberField
-            field={{
-              type: "number",
-              name: "quantity",
-              label: "Quantity",
-              placeholder: "Enter quantity",
-              validation: {
-                required: {
-                  value: true,
-                  message: "Quantity is required"
-                },
-                min: {
-                  value: 1,
-                  message: "Minimum quantity is 1"
-                },
-                max: {
-                  value: 100,
-                  message: "Maximum quantity is 100"
-                }
-              },
-            }}
-            control={control}
-            errors={errors}
-            theme={theme}
-          />
-        </form>
-      );
     }`,
   },
   {
@@ -429,60 +214,6 @@ export const formFields: FieldDocConfig[] = [
       options: TypeOption[];
   }
   `,
-    customCodeUsage: `import { useForm } from "react-hook-form";
-  import { FormwizSelectField } from "formwiz";
-    
-  export default function FormwizSelectFieldDemo() {
-      const theme = {
-        select: "border border-gray-300 rounded-md p-2",
-      };
-    
-      const {
-        control,
-        formState: { errors },
-        handleSubmit,
-      } = useForm();
-    
-      function onSubmit(data) {
-        console.log(data);
-      }
-    
-      return (
-        <form onSubmit={handleSubmit(onSubmit)}>
-  
-         {/* The FormwizSelectField component only renders the input field.
-            It does not include a label or error message by default.
-            You need to manually add them for better accessibility and user feedback. 
-      */}
-  
-          <label htmlFor="country">Country</label>
-          {errors.country && <span className="text-red-500">{errors.country.message}</span>}
-    
-          <FormwizSelectField
-            field={{
-              type: "select",
-              name: "country",
-              label: "Country",
-              placeholder: "Select your country",
-              options: [
-                { label: "United States", value: "us" },
-                { label: "Canada", value: "ca" },
-                { label: "United Kingdom", value: "uk" }
-              ],
-              validation: {
-                required: {
-                  value: true,
-                  message: "Please select a country"
-                },
-              },
-            }}
-            control={control}
-            errors={errors}
-            theme={theme}
-          />
-        </form>
-      );
-    }`,
   },
   {
     type: "textarea",
@@ -516,60 +247,6 @@ export const formFields: FieldDocConfig[] = [
       type: "textarea";
       rows?: number;
     }`,
-    customCodeUsage: `import { useForm } from "react-hook-form";
-  import { FormwizTextAreaField } from "formwiz";
-    
-  export default function FormwizTextAreaFieldDemo() {
-      const theme = {
-        textarea: "border border-gray-300 rounded-md p-2",
-      };
-    
-      const {
-        control,
-        formState: { errors },
-        handleSubmit,
-      } = useForm();
-    
-      function onSubmit(data) {
-        console.log(data);
-      }
-    
-      return (
-        <form onSubmit={handleSubmit(onSubmit)}>
-  
-         {/* The FormwizTextAreaField component only renders the input field.
-            It does not include a label or error message by default.
-            You need to manually add them for better accessibility and user feedback. 
-      */}
-  
-          <label htmlFor="description">Description</label>
-          {errors.description && <span className="text-red-500">{errors.description.message}</span>}
-    
-          <FormwizTextAreaField
-            field={{
-              type: "textarea",
-              name: "description",
-              label: "Description",
-              placeholder: "Enter description",
-              rows: 4,
-              validation: {
-                required: {
-                  value: true,
-                  message: "Description is required"
-                },
-                maxLength: {
-                  value: 500,
-                  message: "Maximum 500 characters allowed"
-                }
-              },
-            }}
-            control={control}
-            errors={errors}
-            theme={theme}
-          />
-        </form>
-      );
-    }`,
   },
   {
     type: "checkbox",
@@ -593,51 +270,6 @@ export const formFields: FieldDocConfig[] = [
     fieldTypeDefinition: `export interface TypeCheckboxFieldConfig extends TypeBaseFieldConfig {
       type: "checkbox";
       label: string;
-    }`,
-    customCodeUsage: `import { useForm } from "react-hook-form";
-    import { FormwizCheckboxField } from "formwiz";
-    
-    export default function FormwizCheckboxFieldDemo() {
-      const theme = {
-        checkbox: "h-4 w-4 rounded border-gray-300 text-blue-600",
-      };
-      {/* The FormifyCheckboxField component only renders the input field.
-            It does not include a label or error message by default.
-            You need to manually add them for better accessibility and user feedback. 
-      */}
-  
-      const {
-        control,
-        formState: { errors },
-        handleSubmit,
-      } = useForm();
-    
-      function onSubmit(data) {
-        console.log(data);
-      }
-    
-      return (
-        <form onSubmit={handleSubmit(onSubmit)}>
-          {errors.terms && <span className="text-red-500">{errors.terms.message}</span>}
-    
-          <FormwizCheckboxField
-            field={{
-              type: "checkbox",
-              name: "terms",
-              label: "I agree to the terms and conditions",
-              validation: {
-                required: {
-                  value: true,
-                  message: "You must agree to the terms"
-                }
-              },
-            }}
-            control={control}
-            errors={errors}
-            theme={theme}
-          />
-        </form>
-      );
     }`,
   },
   {
@@ -670,57 +302,10 @@ export const formFields: FieldDocConfig[] = [
       label: string;
       value: string | number;
     }`,
-    customCodeUsage: `import { useForm } from "react-hook-form";
-    import { FormwizRadioField } from "formwiz";
-    
-    export default function FormwizRadioFieldDemo() {
-      const theme = {
-        radio: "h-4 w-4 border-gray-300 text-blue-600",
-      };
-    
-      const {
-        control,
-        formState: { errors },
-        handleSubmit,
-      } = useForm();
-    
-      function onSubmit(data) {
-        console.log(data);
-      }
-    
-      return (
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <legend>Gender</legend>
-          {errors.gender && <span className="text-red-500">{errors.gender.message}</span>}
-    
-          <FormwizRadioField
-            field={{
-              type: "radio",
-              name: "gender",
-              label: "Gender",
-              options: [
-                { label: "Male", value: "male" },
-                { label: "Female", value: "female" },
-                { label: "Other", value: "other" }
-              ],
-              validation: {
-                required: {
-                  value: true,
-                  message: "Please select a gender"
-                }
-              },
-            }}
-            control={control}
-            errors={errors}
-            theme={theme}
-          />
-        </form>
-      );
-    }`,
   },
   {
     type: "tel",
-    name: "Tel",
+    name: "Tel (Phone)",
     description: "A field for entering telephone numbers.",
     config: {
       type: "tel" as const,
@@ -760,57 +345,6 @@ export const formFields: FieldDocConfig[] = [
   export interface TypeTextFieldConfig extends TypeBaseFieldConfig {
       type: "text";
     }`,
-    customCodeUsage: `import { useForm } from "react-hook-form";
-    import { FormwizTextField } from "formwiz";
-    
-    export default function FormwizTextFieldDemo() {
-      const theme = {
-        text: "border border-gray-300 rounded-md p-2",
-      };
-    
-      const {
-        control,
-        formState: { errors },
-        handleSubmit,
-      } = useForm();
-    
-      function onSubmit(data) {
-        console.log(data);
-      }
-    
-      return (
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <label htmlFor="textField">Text Field</label>
-          {errors.textField && <span className="text-red-500">{errors.textField.message}</span>}
-    
-          <FormwizTextField
-            field={{
-              type: "text",
-              name: "textField",
-              label: "Text Field",
-              placeholder: "Enter text",
-              validation: {
-                required: {
-                  value: true,
-                  message: "Required"
-                },
-                minLength: {
-                  value: 3,
-                  message: "Minimum 3 characters required"
-                },
-                maxLength: {
-                  value: 50,
-                  message: "Maximum 50 characters allowed"
-                }
-              },
-            }}
-            control={control}
-            errors={errors}
-            theme={theme}
-          />
-        </form>
-      );
-    }`,
   },
   {
     type: "url",
@@ -834,54 +368,6 @@ export const formFields: FieldDocConfig[] = [
     fieldTypeDefinition: `export interface TypeURLFieldConfig extends TypeBaseFieldConfig {
       type: "url";
     }`,
-    customCodeUsage: `import { useForm } from "react-hook-form";
-    import { FormwizURLField } from "formwiz";
-    
-    export default function FormwizURLFieldDemo() {
-      const theme = {
-        email: "border border-gray-300 rounded-md p-2",
-      };
-    
-       {/* The FormwizURLField component only renders the input field.
-            It does not include a label or error message by default.
-            You need to manually add them for better accessibility and user feedback. 
-      */}
-  
-      const {
-        control,
-        formState: { errors },
-        handleSubmit,
-      } = useForm();
-    
-      function onSubmit(data) {
-        console.log(data);
-      }
-    
-      return (
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <label htmlFor="website">Email</label>
-          {errors.website && <span className="text-red-500">{errors.website.message}</span>}
-    
-          <FormwizURLField
-            field={{
-              type: "url",
-              name: "url",
-              label: "Website",
-              placeholder: "",
-              validation: {
-                required: {
-                  value: true,
-                  message: "Website is required"
-                }
-              },
-            }}
-            control={control}
-            errors={errors}
-            theme={theme}
-          />
-        </form>
-      );
-    }`,
   },
   {
     type: "datetime-local",
@@ -899,7 +385,6 @@ export const formFields: FieldDocConfig[] = [
         },
       },
     },
-    customCodeUsage: "",
     fieldTypeDefinition: `export interface TypeDateTimeLocalFieldConfig extends TypeBaseFieldConfig {
       type: "datetime-local";
     }`,
@@ -921,7 +406,7 @@ export const formFields: FieldDocConfig[] = [
         required: { value: true, message: "Time is required" },
       },
     },
-    customCodeUsage: "",
+
     fieldTypeDefinition: `export interface TypeTimeFieldConfig extends TypeBaseFieldConfig {
       type: "time";
     }`,
@@ -946,7 +431,6 @@ export const formFields: FieldDocConfig[] = [
         },
       },
     },
-    customCodeUsage: "",
     fieldTypeDefinition: `export interface TypeDateFieldConfig extends TypeBaseFieldConfig {
       type: "time";
     }`,
@@ -974,7 +458,6 @@ export const formFields: FieldDocConfig[] = [
         required: { value: true, message: "Please select at least one skill" },
       },
     },
-    customCodeUsage: "",
     fieldTypeDefinition: `export interface TypeMultiSelectFieldConfig extends TypeBaseFieldConfig {
       type: "multiselect";
       options: TypeOption[];

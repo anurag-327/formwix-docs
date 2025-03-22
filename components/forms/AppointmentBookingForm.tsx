@@ -1,6 +1,6 @@
 "use client";
-import { Formwiz, TypeFieldConfig, TypeFormData } from "formwiz";
-import "formwiz/dist/formwiz.css";
+import { Formwix, TypeFieldConfig, TypeFormData } from "formwix";
+import "formwix/dist/formwix.css";
 export default function AppointmentBookingForm() {
   // Get tomorrow's date in YYYY-MM-DD format for min date validation
   const tomorrow = new Date();
@@ -186,14 +186,14 @@ export default function AppointmentBookingForm() {
   };
 
   return (
-    <div className="max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-md">
+    <div className="max-w-3xl mx-auto p-6 bg-white rounded-lg shadow-md">
       <h2 className="text-2xl font-bold mb-6 text-center">
         Book an Appointment
       </h2>
       <p className="mb-6 text-center text-gray-600">
         Schedule your appointment with our team
       </p>
-      <Formwiz config={formConfig} />
+      <Formwix config={formConfig} />
     </div>
   );
 }

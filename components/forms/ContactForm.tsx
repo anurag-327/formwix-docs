@@ -1,6 +1,6 @@
 "use client";
-import { Formwiz, TypeFieldConfig, TypeFormData } from "formwiz";
-import "formwiz/dist/formwiz.css";
+import { Formwix, TypeFieldConfig, TypeFormData } from "formwix";
+import "formwix/dist/formwix.css";
 export default function ContactForm() {
   const fields: TypeFieldConfig[] = [
     {
@@ -74,13 +74,13 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-md">
+    <div className="max-w-3xl mx-auto p-6 bg-white rounded-lg shadow-md">
       <h2 className="text-2xl font-bold mb-6 text-center">Contact Us</h2>
       <p className="mb-6 text-center text-gray-600">
         Have a question or feedback? Fill out the form below and we'll get back
         to you as soon as possible.
       </p>
-      <Formwiz config={formConfig} />
+      <Formwix config={formConfig} />
     </div>
   );
 }

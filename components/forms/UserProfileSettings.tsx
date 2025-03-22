@@ -1,6 +1,6 @@
 "use client";
-import { Formwiz, TypeFieldConfig, TypeFormData } from "formwiz";
-import "formwiz/dist/formwiz.css";
+import { Formwix, TypeFieldConfig, TypeFormData } from "formwix";
+import "formwix/dist/formwix.css";
 export default function ProfileSettingsForm() {
   const fields: TypeFieldConfig[] = [
     {
@@ -215,9 +215,9 @@ export default function ProfileSettingsForm() {
   };
 
   return (
-    <div className="max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-md">
+    <div className="max-w-3xl mx-auto p-6 bg-white rounded-lg shadow-md">
       <h2 className="text-2xl font-bold mb-6 text-center">Profile Settings</h2>
-      <Formwiz config={formConfig} />
+      <Formwix config={formConfig} />
     </div>
   );
 }

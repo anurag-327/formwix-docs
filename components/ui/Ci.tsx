@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
-import { FormwizPasswordField, TypeFormData } from "formwiz";
+import { FormwixPasswordField, TypeFormData } from "formwix";
 
-export default function FormwizPasswordFieldDemo() {
+export default function FormwixPasswordFieldDemo() {
   const theme = {
     // define theme for the field
     // refer to themes section for more details
@@ -18,7 +18,7 @@ export default function FormwizPasswordFieldDemo() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      {/* The FormwizEmailField component only renders the input field.
+      {/* The FormwixEmailField component only renders the input field.
           It does not include a label or error message by default.
           You need to manually add them for better accessibility and user feedback. 
     */}
@@ -29,7 +29,7 @@ export default function FormwizPasswordFieldDemo() {
         </span>
       )}
 
-      <FormwizPasswordField
+      <FormwixPasswordField
         field={{
           type: "password",
           name: "password",

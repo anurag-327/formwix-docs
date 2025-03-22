@@ -1,10 +1,10 @@
 "use client";
 import {
-  Formwiz,
+  Formwix,
   TypeFieldConfig,
   TypeFormConfig,
   TypeFormData,
-} from "formwiz";
+} from "formwix";
 import {
   Card,
   CardContent,
@@ -12,10 +12,10 @@ import {
   CardHeader,
   CardTitle,
 } from "../../ui/card";
-import FormWizBadge from "../../shared/FormwizBadge";
+import FormWizBadge from "../../shared/FormwixBadge";
 import { Separator } from "../../ui/separator";
 import { toast } from "sonner";
-import "formwiz/dist/formwiz.css";
+import "formwix/dist/formwix.css";
 export default function DemoSignup() {
   const fields: TypeFieldConfig[] = [
     {
@@ -115,7 +115,7 @@ export default function DemoSignup() {
       </CardHeader>
       <Separator />
       <CardContent className="py-6">
-        <Formwiz
+        <Formwix
           config={config}
           theme={{
             label: "text-gray-800 font-[500]",

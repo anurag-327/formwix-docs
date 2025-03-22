@@ -43,7 +43,6 @@ export function CodeBlock({
 
   return (
     <Card className="relative p-4 w-full text-base h-full overflow-x-auto bg-[#0D1117] rounded-lg border border-gray-700">
-      {/* Copy Button */}
       <TooltipProvider>
         <Tooltip>
           <TooltipTrigger asChild>
@@ -66,7 +65,6 @@ export function CodeBlock({
         </Tooltip>
       </TooltipProvider>
 
-      {/* Code Block */}
       <pre className="whitespace-pre overflow-auto">
         {highlightedCode ? (
           <div
@@ -74,7 +72,7 @@ export function CodeBlock({
             className="font-mono"
           />
         ) : (
-          <p className="text-white">Loading...</p>
+          <div className="text-white h-full w-full">Loading...</div>
         )}
       </pre>
     </Card>

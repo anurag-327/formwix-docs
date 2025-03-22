@@ -1,6 +1,6 @@
 "use client";
-import { Formwiz, TypeFieldConfig, TypeFormData } from "formwiz";
-import "formwiz/dist/formwiz.css";
+import { Formwix, TypeFieldConfig, TypeFormData } from "formwix";
+import "formwix/dist/formwix.css";
 export default function LoginForm() {
   const fields: TypeFieldConfig[] = [
     {
@@ -45,7 +45,7 @@ export default function LoginForm() {
   return (
     <div className="max-w-md mx-auto p-6 bg-white rounded-lg shadow-md">
       <h2 className="text-2xl font-bold mb-6 text-center">Login</h2>
-      <Formwiz config={formConfig} />
+      <Formwix config={formConfig} />
       <div className="mt-4 text-center">
         <a href="#" className="text-blue-500 hover:underline">
           Forgot Password?

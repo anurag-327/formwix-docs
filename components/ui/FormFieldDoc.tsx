@@ -2,9 +2,9 @@
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
 import { CodeBlock } from "@/components/ui/Codeblock";
-import { TypeFieldConfig, TypeFormConfig } from "formwiz";
+import { TypeFieldConfig, TypeFormConfig } from "formwix";
 
-import FormwizRunner from "../docs/ui/FormwizRunner";
+import FormwixRunner from "../docs/ui/FormwixRunner";
 import { generatePreviewCode } from "@/lib/generators";
 import { FieldDocConfig } from "@/data/fields";
 type Props = {
@@ -13,7 +13,7 @@ type Props = {
 
 export default function FormFieldDocs({ data }: Props) {
   const genericValidationRule = `interface TypeGenericValidationRule {
-    value: number | string | RegExp | boolean;
+    value: number | string  | boolean;
     message?: string;
   }`;
   const baseFieldConfig = `interface TypeBaseFieldConfig {
@@ -30,7 +30,7 @@ export default function FormFieldDocs({ data }: Props) {
   const fieldTypes = `${genericValidationRule}\n ${baseFieldConfig}\n${data.validationRules}\n${data.fieldTypeDefinition}`;
   const fields = [data.config];
   return (
-    <Tabs defaultValue="preview" className="w-full max-w-2xl  mx-auto text-sm">
+    <Tabs defaultValue="preview" className="w-full max-w-3xl  mx-auto text-sm">
       <TabsList className=" bg-white shadow-none border-b rounded-none border-gray-200 p-0 w-full justify-start mb-4">
         <TabsTrigger
           value="preview"
@@ -59,7 +59,7 @@ export default function FormFieldDocs({ data }: Props) {
       <TabsContent value="preview">
         <Card className="h-[400px] w-full flex justify-center items-center shadow-none">
           <CardContent className="p-4 w-full md:w-[400px]">
-            <FormwizRunner fields={fields as TypeFieldConfig[]} />
+            <FormwixRunner fields={fields as TypeFieldConfig[]} />
           </CardContent>
         </Card>
       </TabsContent>

@@ -1,6 +1,6 @@
 "use client";
-import { Formwiz, TypeFieldConfig, TypeFormData } from "formwiz";
-import "formwiz/dist/formwiz.css";
+import { Formwix, TypeFieldConfig, TypeFormData } from "formwix";
+import "formwix/dist/formwix.css";
 export default function CustomerFeedbackForm() {
   const fields: TypeFieldConfig[] = [
     {
@@ -108,7 +108,7 @@ export default function CustomerFeedbackForm() {
   return (
     <main className="max-w-3xl mx-auto mt-10 p-6 bg-white rounded-lg shadow-md">
       <h1 className="text-2xl font-bold mb-6 text-center">Customer Feedback</h1>
-      <Formwiz config={formConfig} />
+      <Formwix config={formConfig} />
     </main>
   );
 }

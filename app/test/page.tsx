@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { fieldConfigs } from "./configs"; // Import the configs array
-import FormwizPasswordFieldDemo from "@/components/ui/Ci";
+import FormwixPasswordFieldDemo from "@/components/ui/Ci";
 
 const Page = () => {
   // State to track which field type is currently selected
@@ -10,7 +10,7 @@ const Page = () => {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-2xl font-bold mb-6">Formwiz Field Documentation</h1>
+      <h1 className="text-2xl font-bold mb-6">Formwix Field Documentation</h1>
 
       {/* Field selector */}
       <div className="mb-8">
@@ -40,7 +40,7 @@ const Page = () => {
        
       /> */}
 
-      <FormwizPasswordFieldDemo />
+      <FormwixPasswordFieldDemo />
     </div>
   );
 };

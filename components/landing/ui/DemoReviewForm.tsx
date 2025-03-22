@@ -1,5 +1,5 @@
 "use client";
-import FormWizBadge from "@/components/shared/FormwizBadge";
+import FormWizBadge from "@/components/shared/FormwixBadge";
 import {
   Card,
   CardContent,
@@ -9,13 +9,13 @@ import {
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import {
-  Formwiz,
+  Formwix,
   TypeFieldConfig,
   TypeFormConfig,
   TypeFormData,
-} from "formwiz";
+} from "formwix";
 import { toast } from "sonner";
-import "formwiz/dist/formwiz.css";
+import "formwix/dist/formwix.css";
 export default function ProductReviewForm() {
   const fields: TypeFieldConfig[] = [
     {
@@ -83,12 +83,12 @@ export default function ProductReviewForm() {
           Product Review
         </CardTitle>
         <div className="text-sm text-gray-500">
-          Share your experience with formwiz
+          Share your experience with formwix
         </div>
       </CardHeader>
       <Separator />
       <CardContent className="py-6 flex flex-col gap-6">
-        <Formwiz
+        <Formwix
           config={config}
           theme={{
             text: "border border-gray-300 w-full py-2 px-2 rounded-lg outline-none",

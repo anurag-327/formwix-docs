@@ -1,14 +1,14 @@
 "use client";
-import { Formwiz, TypeFieldConfig, TypeFormData } from "formwiz";
+import { Formwix, TypeFieldConfig, TypeFormData } from "formwix";
 import { toast } from "sonner";
-import "formwiz/dist/formwiz.css";
-export default function FormwizRunner({
+import "formwix/dist/formwix.css";
+export default function FormwixRunner({
   fields,
 }: {
   fields: TypeFieldConfig[];
 }) {
   return (
-    <Formwiz
+    <Formwix
       config={{
         fields: fields,
         onSubmit: (data: TypeFormData) => {
