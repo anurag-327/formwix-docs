@@ -90,9 +90,9 @@ export default function Navbar() {
                   href={item.href}
                   className={`${
                     pathname === item.href
-                      ? "border-black dark:border-white text-black dark:text-white"
-                      : "border-transparent text-muted-foreground hover:text-primary dark:hover:text-gray-300"
-                  } inline-flex items-center px-1 pt-1 border-b-2 text-sm`}
+                      ? " dark:border-white font-medium text-blue-500"
+                      : "text-muted-foreground hover:text-primary dark:hover:text-gray-300"
+                  } inline-flex items-center px-1 pt-1 text-sm`}
                 >
                   {item.label}
                 </Link>
