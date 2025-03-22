@@ -6,12 +6,14 @@ import { formFields } from "@/data/fields";
 import { formatConfig, generatePreviewCode } from "@/lib/generators";
 import { notFound } from "next/navigation";
 
-export default async function Page({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
-  const slug = (await params).slug;
+export async function generateStaticParams() {
+  return formFields.map((field) => ({
+    slug: field.type,
+  }));
+}
+
+export default function Page({ params }: { params: { slug: string } }) {
+  const { slug } = params;
   const data = formFields.find((field) => field.type === slug);
   const breadcrumbItems = [
     { name: "Docs", href: "/docs" },

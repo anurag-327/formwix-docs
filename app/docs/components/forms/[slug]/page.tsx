@@ -3,12 +3,13 @@ import Breadcrumbs from "@/components/shared/Breadcrumbs";
 import { forms } from "@/data/forms";
 import { notFound } from "next/navigation";
 
-export default async function Page({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
-  const slug = (await params).slug;
+export async function generateStaticParams() {
+  return forms.map((field) => ({
+    slug: field.slug,
+  }));
+}
+export default function Page({ params }: { params: { slug: string } }) {
+  const { slug } = params;
   const data = forms.find((field) => field.slug === slug);
   const breadcrumbItems = [
     { name: "Docs", href: "/docs" },
