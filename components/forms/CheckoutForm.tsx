@@ -70,7 +70,7 @@ export default function CheckoutForm() {
       validation: {
         required: { value: true, message: "Card number is required" },
         pattern: {
-          value: /^[\d\s]{16,19}$/,
+          value: "/^[\d\s]{16,19}$/",
           message: "Please enter a valid card number",
         },
       },
@@ -83,7 +83,7 @@ export default function CheckoutForm() {
       validation: {
         required: { value: true, message: "Expiration date is required" },
         pattern: {
-          value: /^(0[1-9]|1[0-2])\/([0-9]{2})$/,
+          value: "/^(0[1-9]|1[0-2])\/([0-9]{2})$/",
           message: "Please enter a valid expiration date (MM/YY)",
         },
       },
@@ -96,7 +96,7 @@ export default function CheckoutForm() {
       validation: {
         required: { value: true, message: "CVC is required" },
         pattern: {
-          value: /^[0-9]{3,4}$/,
+          value: "/^[0-9]{3,4}$/",
           message: "Please enter a valid CVC",
         },
       },

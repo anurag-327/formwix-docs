@@ -38,7 +38,7 @@ export default function LoanApplicationForm() {
       validation: {
         required: { value: true, message: "Phone number is required" },
         pattern: {
-          value: /^[0-9+\-\s()]*$/,
+          value: "/^[0-9+\-\s()]*$/",
           message: "Please enter a valid phone number",
         },
       },
@@ -63,7 +63,7 @@ export default function LoanApplicationForm() {
       validation: {
         required: { value: true, message: "SSN is required" },
         pattern: {
-          value: /^\d{3}-\d{2}-\d{4}$/,
+          value: "/^\d{3}-\d{2}-\d{4}$/",
           message: "Please enter a valid SSN (XXX-XX-XXXX)",
         },
       },
@@ -103,7 +103,7 @@ export default function LoanApplicationForm() {
       validation: {
         required: { value: true, message: "Zip code is required" },
         pattern: {
-          value: /^\d{5}(-\d{4})?$/,
+          value: "/^\d{5}(-\d{4})?$/",
           message: "Please enter a valid ZIP code",
         },
       },

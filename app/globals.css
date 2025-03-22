@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap')
 
 
 @layer utilities {
@@ -16,7 +15,6 @@
   font-family: "Geist Mono", monospace;
   font-optical-sizing: auto;
 }
-
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }

@@ -35,7 +35,7 @@ export default function Page() {
       </div>
       <div className="mb-8">
         <h2 className="text-lg font-semibold mb-4">
-          Formwix is not just another form library—it's a complete form
+          Formwix is not just another form library—it&apos;s a complete form
           management system.
         </h2>
         <p className="leading-[1.65rem] [&:not(:first-child)]:mt-6">

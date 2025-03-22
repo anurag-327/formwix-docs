@@ -33,7 +33,7 @@ export default function EventRegistrationForm() {
       label: "Phone Number",
       validation: {
         pattern: {
-          value: /^[\d\+\-\(\) ]{10,15}$/,
+          value: "/^[\d\+\-\(\) ]{10,15}$/",
           message: "Please enter a valid phone number",
         },
       },

@@ -29,7 +29,7 @@ export default function RestaurantReservationForm() {
       validation: {
         required: { value: true, message: "Phone number is required" },
         pattern: {
-          value: /^[0-9+\-\s()]*$/,
+          value: "/^[0-9+\-\s()]*$/",
           message: "Please enter a valid phone number",
         },
       },

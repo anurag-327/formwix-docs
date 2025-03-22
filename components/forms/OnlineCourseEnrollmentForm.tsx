@@ -37,7 +37,7 @@ export default function CourseEnrollmentForm() {
       placeholder: "Enter your phone number",
       validation: {
         pattern: {
-          value: /^[0-9+\-\s()]*$/,
+          value: "/^[0-9+\-\s()]*$/",
           message: "Please enter a valid phone number",
         },
       },

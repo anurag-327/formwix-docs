@@ -1,4 +1,4 @@
-import DemoFormRenderer from "@/components/docs/ui/DemoFormRenderer";
+import DemoFormRenderer from "@/components/docs/DemoFormRenderer";
 import Breadcrumbs from "@/components/shared/Breadcrumbs";
 import { forms } from "@/data/forms";
 import { notFound } from "next/navigation";

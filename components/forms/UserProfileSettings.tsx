@@ -30,7 +30,7 @@ export default function ProfileSettingsForm() {
       validation: {
         required: { value: true, message: "Username is required" },
         pattern: {
-          value: /^[a-zA-Z0-9_-]{3,16}$/,
+          value: "/^[a-zA-Z0-9_-]{3,16}$/",
           message:
             "Username must be 3-16 characters and can only contain letters, numbers, underscores, and hyphens",
         },

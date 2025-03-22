@@ -36,7 +36,7 @@ export default function AppointmentBookingForm() {
       validation: {
         required: { value: true, message: "Phone number is required" },
         pattern: {
-          value: /^[\d\+\-\(\) ]{10,15}$/,
+          value: "/^[\d\+\-\(\) ]{10,15}$/",
           message: "Please enter a valid phone number",
         },
       },
