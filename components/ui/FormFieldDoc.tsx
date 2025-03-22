@@ -2,9 +2,9 @@
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
 import { CodeBlock } from "@/components/ui/Codeblock";
-import { TypeFieldConfig, TypeFormConfig } from "formwix";
+import { TypeFieldConfig } from "formwix";
 
-import FormwixRunner from "../docs/ui/FormwixRunner";
+import FormwixRunner from "../docs/FormwixRunner";
 import { generatePreviewCode } from "@/lib/generators";
 import { FieldDocConfig } from "@/data/fields";
 type Props = {
