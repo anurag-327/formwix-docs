@@ -1,12 +1,9 @@
 "use client";
-
 import { formFields } from "@/data/fields";
 import { forms } from "@/data/forms";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
 type Section = "Getting Started" | "Components" | "Forms";
-
 export default function DocsSidebar() {
   const pathname = usePathname();
   const inputLinks: { name: string; href: string; slug: string }[] =

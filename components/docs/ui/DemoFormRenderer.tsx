@@ -2,12 +2,7 @@
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
 import { CodeBlock } from "@/components/ui/Codeblock";
-import {
-  Formwix,
-  TypeFieldConfig,
-  TypeFormConfig,
-  TypeFormData,
-} from "formwix";
+import { TypeFieldConfig } from "formwix";
 
 import FormwixRunner from "./FormwixRunner";
 import { generatePreviewCode } from "@/lib/generators";
