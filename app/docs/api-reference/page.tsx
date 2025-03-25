@@ -27,13 +27,50 @@ export default function Page() {
           code={`export interface TypeFormConfig {
   fields: TypeFieldConfig[];
   submitButtonLabel?: string;
+  validationMode?: "onBlur" | "onChange" | "onSubmit" | "onTouched" | "all";
   onSubmit: (data: TypeFormData, formUtils: TypeFormUtils) => void;
   defaultValues?: TypeFormData;
-  showFormReset?: boolean;
+  showFormResetButton?: boolean;
   resetButtonLabel?: string;
 };`}
         />
       </div>
+
+      {/* Validation Mode Configuration */}
+      <div className="my-8">
+        <h2 className="text-xl font-semibold mb-4">
+          Validation Mode Configuration
+        </h2>
+        <p className="mb-4">
+          The validationMode option determines when form validation is
+          triggered. You can choose from the following modes:
+        </p>
+
+        <CodeBlock
+          code={`onBlur: Validation occurs when a field loses focus.
+onChange (default) : Validation occurs as the user types or modifies the field.
+onSubmit: Validation happens only when the form is submitted.
+onTouched: Validation runs when a field is touched and then modified.
+all: Combines all the above modes, validating on every interaction.`}
+        />
+
+        <div>
+          {/* Form Utilities */}
+          <div className="my-8 ">
+            <h2 className="text-xl font-semibold mb-4">Form Utilities</h2>
+            <p className="mb-4">
+              Form utilities provide helper functions to manipulate the form
+              state.
+            </p>
+            <CodeBlock
+              code={`export type TypeFormUtils = {
+  reset: () => void; // Resets the form
+};`}
+            />
+          </div>
+        </div>
+      </div>
+
       {/* Submit Button Configuration */}
       <div className="my-8">
         <h2 className="text-xl font-semibold mb-4">
