@@ -18,7 +18,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-white text-black`}>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+              localStorage.getItem('theme') ==="dark" && document.documentElement.classList.add('dark') 
+              })();
+            `,
+          }}
+        />
+      </head>
+      <body className={`${inter.className}`}>
         <Toaster />
         <Navbar />
         <main className="min-h-[90vh] mx-auto px-4">{children}</main>

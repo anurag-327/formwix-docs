@@ -15,7 +15,7 @@ export default function NpmCommandWithCopy() {
   return (
     <button
       onClick={handleCopy}
-      className="w-fit tracking-tight font-normal text-gray-500 text-xs flex items-center justify-between group relative"
+      className="w-fit tracking-tight font-normal text-gray-500 dark:text-gray-300 text-xs flex items-center justify-between group relative"
     >
       <div className="py-1 geist-mono rounded-full px-3 overflow-x-auto whitespace-nowrap">
         {commandText}

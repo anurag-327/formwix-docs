@@ -24,8 +24,7 @@ export default function DemoLogin() {
       name: "email",
       placeholder: "Enter your email",
       theme: {
-        email:
-          "border border-gray-300 w-full py-2 px-2 rounded-lg outline-none",
+        email: "border w-full py-2 px-2 rounded-lg outline-none",
       },
       validation: {
         required: { value: true, message: "Email is required" },
@@ -114,7 +113,7 @@ export default function DemoLogin() {
           config={config}
           theme={{
             submitButton:
-              "bg-black text-white w-full py-2 rounded-lg disabled:cursor-not-allowed",
+              "bg-black text-white dark:bg-zinc-800 w-full py-2 rounded-lg disabled:cursor-not-allowed",
           }}
         />
       </CardContent>

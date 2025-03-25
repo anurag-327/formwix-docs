@@ -31,17 +31,17 @@ export default function FormFieldDocs({ data }: Props) {
   const fields = [data.config];
   return (
     <Tabs defaultValue="preview" className="w-full max-w-3xl  mx-auto text-sm">
-      <TabsList className=" bg-white shadow-none border-b rounded-none border-gray-200 p-0 w-full justify-start mb-4">
+      <TabsList className=" shadow-none border-b rounded-none border-gray-200 dark:border-gray-800 bg-transparent p-0 w-full justify-start mb-4">
         <TabsTrigger
           value="preview"
-          className="pb-2 rounded-none shadow-none border-b-2 border-transparent data-[state=active]:border-b-black data-[state=active]:rounded-none data-[state=active]:bg-transparent  data-[state=active]:shadow-none "
+          className="pb-2 rounded-none shadow-none border-b-2 border-transparent data-[state=active]:border-b-black dark:data-[state=active]:border-b-white data-[state=active]:rounded-none data-[state=active]:bg-transparent  data-[state=active]:shadow-none "
         >
           Preview
         </TabsTrigger>
 
         <TabsTrigger
           value="code"
-          className="pb-2 rounded-none shadow-none border-b-2 border-transparent data-[state=active]:border-b-black data-[state=active]:rounded-none data-[state=active]:bg-transparent  data-[state=active]:shadow-none "
+          className="pb-2 rounded-none shadow-none border-b-2 border-transparent data-[state=active]:border-b-black dark:data-[state=active]:border-b-white data-[state=active]:rounded-none data-[state=active]:bg-transparent  data-[state=active]:shadow-none "
         >
           Code
         </TabsTrigger>
@@ -49,7 +49,7 @@ export default function FormFieldDocs({ data }: Props) {
         {fieldTypes && (
           <TabsTrigger
             value="types"
-            className="pb-2 rounded-none shadow-none border-b-2 border-transparent data-[state=active]:border-b-black data-[state=active]:rounded-none data-[state=active]:bg-transparent  data-[state=active]:shadow-none "
+            className="pb-2 rounded-none shadow-none border-b-2 border-transparent data-[state=active]:border-b-black dark:data-[state=active]:border-b-white data-[state=active]:rounded-none data-[state=active]:bg-transparent  data-[state=active]:shadow-none "
           >
             Types
           </TabsTrigger>

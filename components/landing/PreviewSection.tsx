@@ -83,7 +83,7 @@ export default function Login() {
 export default function CodePreviewSection() {
   return (
     <div className="flex flex-col md:flex-row gap-6 w-full max-w-6xl mx-auto md:border overflow-hidden items-center">
-      <div className="w-full md:w-1/2 md:bg-gray-100 md:p-6 flex items-center justify-center">
+      <div className="w-full md:w-1/2 md:bg-gray-100 dark:bg-zinc-800 md:p-6 flex items-center justify-center">
         <DemoLogin />
       </div>
       <div className="w-full md:w-1/2 rounded-xl md:mr-6 md:p-0 max-h-[400px] md:max-h-[415px] overflow-scroll no-scrollbar">

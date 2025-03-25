@@ -1,6 +1,6 @@
 export function generatePreviewCode({ fields }: { fields: any[] }) {
   return `import { Formwix, TypeFormData, TypeFieldConfig, TypeFormConfig } from "formwix";
-
+import "formwix/dist/formwix.css";
 // default css styles
 // You can manage your own styles by passing theme props to Formwix component
 // refer to themes section for more details
