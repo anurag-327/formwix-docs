@@ -62,6 +62,7 @@ export default function Login() {
   const config: TypeFormConfig = {
     fields,
     submitButtonLabel: "Login",
+    validationMode: "onChange",
     onSubmit: (values: TypeFormData, { reset }) => {
       console.log(values);
       reset();
@@ -73,7 +74,7 @@ export default function Login() {
           <Formwix 
             config={config} 
             theme={{
-              submitButton: "bg-black text-white w-full py-2 rounded-lg",
+               submitButton: "bg-black text-white w-full py-2 rounded-lg disabled:cursor-not-allowed",
             }} />
       </div>
       );

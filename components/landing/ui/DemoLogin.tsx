@@ -75,6 +75,7 @@ export default function DemoLogin() {
   const config: TypeFormConfig = {
     fields,
     submitButtonLabel: "Login",
+    validationMode: "onChange",
     onSubmit: (values: TypeFormData, { reset }) => {
       toast(
         <div className="flex flex-col w-full gap-2">
@@ -112,7 +113,8 @@ export default function DemoLogin() {
         <Formwix
           config={config}
           theme={{
-            submitButton: "bg-black text-white w-full py-2 rounded-lg",
+            submitButton:
+              "bg-black text-white w-full py-2 rounded-lg disabled:cursor-not-allowed",
           }}
         />
       </CardContent>
