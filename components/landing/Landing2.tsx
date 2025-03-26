@@ -7,9 +7,11 @@ export default async function FormwixMinimalFeatures() {
     <div className="container mx-auto leading-[1.65rem] md:px-16 ">
       <div className="flex flex-col ">
         <div className="md:min-h-[92vh] mt-12 md:mt-0 flex flex-col justify-center">
-          <h3 className="text-xs mb-1.5 cursor-pointer font-medium underline-offset-4 hover:underline flex items-center">
-            Get Started with v1 <ArrowRight size={14} className="ml-2" />
-          </h3>
+          <a href="/docs/installation">
+            <h3 className="text-xs mb-1.5 cursor-pointer font-medium underline-offset-4 hover:underline hover:text-blue-500 flex items-center">
+              Get Started with v1 <ArrowRight size={14} className="ml-2" />
+            </h3>
+          </a>
           <h1 className="font-extrabold text-5xl mb-3">Formwix</h1>
           <p className="text-muted-foreground text-sm">
             Configuration-based form builder for React applications
@@ -23,7 +25,7 @@ export default async function FormwixMinimalFeatures() {
                 Get Started
               </a>
               <a
-                className="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium h-7 px-3 text-xs rounded-md"
+                className="inline-flex items-center hover:bg-gray-100 dark:hover:bg-zinc-900 justify-center gap-2 whitespace-nowrap font-medium h-7 px-3 text-xs rounded-md"
                 href="/docs/components/input"
               >
                 Components
@@ -34,7 +36,10 @@ export default async function FormwixMinimalFeatures() {
           <div className="grid grid-cols-1 max-w-4xl md:grid-cols-2 gap-4 mt-2 mb-6">
             <div className="flex items-start">
               <div className="mt-0.5 mr-2 bg-blue-50 dark:bg-zinc-800 p-1 rounded-full">
-                <Check size={12} className="text-blue-600 dark:text-white" />
+                <Check
+                  size={12}
+                  className="text-blue-600 dark:text-green-500"
+                />
               </div>
               <div>
                 <div className="text-sm font-medium">Configuration-Driven</div>
@@ -46,7 +51,10 @@ export default async function FormwixMinimalFeatures() {
 
             <div className="flex items-start">
               <div className="mt-0.5 mr-2 bg-blue-50 dark:bg-zinc-800 p-1 rounded-full">
-                <Check size={12} className="text-blue-600 dark:text-white" />
+                <Check
+                  size={12}
+                  className="text-blue-600 dark:text-green-500"
+                />
               </div>
               <div>
                 <div className="text-sm font-medium">
@@ -60,7 +68,10 @@ export default async function FormwixMinimalFeatures() {
 
             <div className="flex items-start">
               <div className="mt-0.5 mr-2 bg-blue-50 dark:bg-zinc-800 p-1 rounded-full">
-                <Check size={12} className="text-blue-600 dark:text-white" />
+                <Check
+                  size={12}
+                  className="text-blue-600 dark:text-green-500"
+                />
               </div>
               <div>
                 <div className="text-sm font-medium">Flexible Theming</div>
@@ -72,7 +83,10 @@ export default async function FormwixMinimalFeatures() {
 
             <div className="flex items-start">
               <div className="mt-0.5 mr-2 bg-blue-50 dark:bg-zinc-800 p-1 rounded-full">
-                <Check size={12} className="text-blue-600 dark:text-white" />
+                <Check
+                  size={12}
+                  className="text-blue-600 dark:text-green-500"
+                />
               </div>
               <div>
                 <div className="text-sm font-medium">Type-Safe Validation</div>
