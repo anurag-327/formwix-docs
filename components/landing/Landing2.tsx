@@ -7,7 +7,7 @@ export default async function FormwixMinimalFeatures() {
     <div className="container mx-auto leading-[1.65rem] md:px-16 ">
       <div className="flex flex-col ">
         <div className="md:min-h-[92vh] mt-12 md:mt-0 flex flex-col justify-center">
-          <a href="/docs/installation">
+          <a href="/docs/installation" className="w-fit">
             <h3 className="text-xs mb-1.5 cursor-pointer font-medium underline-offset-4 hover:underline hover:text-blue-500 flex items-center">
               Get Started with v1 <ArrowRight size={14} className="ml-2" />
             </h3>
